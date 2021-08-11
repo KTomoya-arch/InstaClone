@@ -20,5 +20,13 @@ module InstaClone
     # the framework and any gems in your application.
     #　#　以下の記述を追記する(設定必須)
     config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.{rb,yml}').to_s]
+
+    config.generators do |g|
+      g.assets false
+      g.skip_routes true
+      g.test_framework false
+      g.helper false
+    end
+
   end
 end
