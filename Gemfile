@@ -61,3 +61,4 @@ gem 'html2slim'
 gem 'sorcery'
 gem 'rubocop', require: false
 gem 'redis-rails'
+gem 'rails-i18n', '~> 5.1'
