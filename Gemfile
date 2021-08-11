@@ -62,6 +62,7 @@ gem 'sorcery'
 gem 'rubocop', require: false
 gem 'redis-rails'
 gem 'rails-i18n', '~> 5.1'
+
 group :development do
   gem 'annotate'
 end
@@ -74,3 +75,4 @@ end
 gem 'pry-byebug', group: :development
 gem 'pry-rails'
 gem 'jquery-rails'
+gem 'font-awesome-sass'
