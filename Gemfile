@@ -60,3 +60,4 @@ gem 'slim-rails'
 gem 'html2slim'
 gem 'sorcery'
 gem 'rubocop', require: false
+gem 'redis-rails'
