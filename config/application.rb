@@ -18,7 +18,7 @@ module InstaClone
     # Application configuration can go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded after loading
     # the framework and any gems in your application.
-    #　#　以下の記述を追記する(設定必須)
+    # 　#　以下の記述を追記する(設定必須)
     config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.{rb,yml}').to_s]
 
     config.generators do |g|
@@ -27,6 +27,5 @@ module InstaClone
       g.test_framework false
       g.helper false
     end
-
   end
 end
