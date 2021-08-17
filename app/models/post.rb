@@ -14,7 +14,7 @@
 #  index_posts_on_user_id  (user_id)
 #
 class Post < ApplicationRecord
-  belongs_to user
+  belongs_to :user
   validates :images, presence: true
   validates :body, presence: true, length: {maximum: 1000}
 end
