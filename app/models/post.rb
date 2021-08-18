@@ -14,6 +14,7 @@
 #  index_posts_on_user_id  (user_id)
 #
 class Post < ApplicationRecord
+  mount_uploader :images, ImageUploader
   belongs_to :user
   validates :images, presence: true
   validates :body, presence: true, length: {maximum: 1000}
