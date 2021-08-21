@@ -1,8 +1,6 @@
 .container
   .row
     .col-md-8.col-12
-      / eachで回すよりパフォーマンスがよい
-      / https://pikawaka.com/rails/partial_template
       = render partial: 'post', collection: @posts
     .col-md-4.col-12
       - if logged_in?

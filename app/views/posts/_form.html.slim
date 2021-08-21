@@ -1,8 +1,10 @@
 = form_with model: post, local: true do |f|
+  / shared/error_messagesをレンダーしてpostオブジェクトをチェックさせている。(if object.errors.any?)
   = render 'shared/error_messages', object: post
   .form-group
     = f.label :images
     = f.file_field :images, multiple: true, class: 'form-control'
+    / imagesの中に画像が複数入っているので、それを取り出している
     - post.images.each do |image|
       = image_tag image.url, size: '100x100', class: 'image-thumbnail'
   .form-group

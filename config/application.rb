@@ -19,7 +19,7 @@ module InstaClone
     # -- all .rb files in that directory are automatically loaded after loading
     # the framework and any gems in your application.
     # 　#　以下の記述を追記する(設定必須)
-    config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.{rb,yml}').to_s]
+    config.i18n.load_path += Dir[Rails.root.join('config/locales/**/*.{rb,yml}').to_s]
 
     config.generators do |g|
       g.assets false

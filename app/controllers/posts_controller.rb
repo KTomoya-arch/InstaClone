@@ -1,13 +1,13 @@
 class PostsController < ApplicationController
-  #ログインしていないとできないアクションを定義する
+  # ログインしていないとできないアクションを定義する
   #:require_loginはsorceryのメソッド
-  before_action :require_login, only: %i[new create edit update destroy]
+  before_action :require_login, only: [:new, :create, :edit, :update, :destroy]
 
   def index
-    #includesは複数のテーブルが関連している場合に関連付けされているテーブルのデータも事前に取得できるメソッド
-    #投稿に紐づくユーザ情報もincludes(:user)⇦引数で指定して取得している
-    #incluedsが無いと@posts.each do |post| ...post.usernameとした場合にループするたびにUserテーブルへ
-    #データを取得しにいくと解釈した(要確認)
+    # includesは複数のテーブルが関連している場合に関連付けされているテーブルのデータも事前に取得できるメソッド
+    # 投稿に紐づくユーザ情報もincludes(:user)⇦引数で指定して取得している
+    # incluedsが無いと@posts.each do |post| ...post.usernameとした場合にループするたびにUserテーブルへ
+    # データを取得しにいくと解釈した(要確認)
     @posts = Post.all.includes(:user).order(created_at: :desc)
   end
 
@@ -16,7 +16,7 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = current_user.posts.build(post_params) 
+    @post = current_user.posts.build(post_params)
     if @post.save
       redirect_to posts_path, success: '投稿しました'
     else
@@ -45,7 +45,6 @@ class PostsController < ApplicationController
 
   def destroy
     @post = current_user.posts.find(params[:id])
-    # 失敗しないはずなので、もし失敗したら例外処理とする
     @post.destroy!
     redirect_to posts_path, success: '投稿を削除しました'
   end
