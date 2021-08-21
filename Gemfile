@@ -79,3 +79,4 @@ gem 'font-awesome-sass'
 gem 'faker'
 
 gem 'carrierwave'
+gem 'mini_magick'
