@@ -76,3 +76,7 @@ gem 'pry-byebug', group: :development
 gem 'pry-rails'
 gem 'jquery-rails'
 gem 'font-awesome-sass'
+gem 'faker'
+
+gem 'carrierwave'
+gem 'mini_magick'

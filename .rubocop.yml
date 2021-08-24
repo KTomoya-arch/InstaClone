@@ -29,6 +29,7 @@ Metrics/BlockLength:
     - 'Gemfile'
     - 'config/**/*'
     - 'spec/**/*_spec.rb'
+    - 'lib/tasks/auto_annotate_models.rake'
 
 Metrics/ClassLength:
   CountComments: false

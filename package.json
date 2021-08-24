@@ -2,6 +2,7 @@
   "name": "InstaClone",
   "private": true,
   "dependencies": {
-    "bootstrap-material-design": "^4.1.1"
+    "bootstrap-material-design": "^4.1.1",
+    "swiper": "^6.8.3"
   }
 }

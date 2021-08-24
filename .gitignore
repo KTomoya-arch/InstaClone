@@ -29,3 +29,6 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+
+# 投稿された画像をgit管理対象から除外する
+/public/uploads
