@@ -32,3 +32,5 @@
 
 # 投稿された画像をgit管理対象から除外する
 /public/uploads
+
+/vendor/bundle
