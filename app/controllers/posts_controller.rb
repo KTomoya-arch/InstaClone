@@ -8,7 +8,7 @@ class PostsController < ApplicationController
     # 投稿に紐づくユーザ情報もincludes(:user)⇦引数で指定して取得している
     # incluedsが無いと@posts.each do |post| ...post.usernameとした場合にループするたびにUserテーブルへ
     # データを取得しにいくと解釈した(要確認)
-    @posts = Post.all.includes(:user).order(created_at: :desc)
+    @posts = Post.all.includes(:user).order(created_at: :desc).page(params[:page])
   end
 
   def new
