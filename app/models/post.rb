@@ -20,6 +20,7 @@ class Post < ApplicationRecord
   # ただ１つのカラムに対して複数のデータが入ってるのはよくあることなのか疑問
   serialize :images, JSON
   belongs_to :user
+  has_many :comments, dependent: :destroy
   validates :images, presence: true
   validates :body, presence: true, length: { maximum: 1000 }
 end
