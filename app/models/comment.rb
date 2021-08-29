@@ -17,4 +17,6 @@
 class Comment < ApplicationRecord
   belongs_to :user
   belongs_to :post
+  # presenceは空でないこと、lengthは最大文字列長を1000字に制限
+  validates :body, presence: true, length: { maximum: 1000 }
 end
